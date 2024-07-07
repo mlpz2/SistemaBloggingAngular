@@ -1,1 +1,28 @@
-<p>blog works!</p>
+  <div class="postFormulario">
+    <h1>Suba un nuevo post:</h1>
+    <div class="postFormularioCaja">
+      <div>
+        <label for="titulo">El titulo:</label>
+        <input type="text" id="titulo" placeholder="Ponga el titulo del post" required [(ngModel)]="nuevoPost.titulo">
+      </div>
+      <div>
+        <label for="imagen">La imagen:</label>
+        <input type="url" id="imagen" placeholder="Ponga la dirección url de la imagen" required [(ngModel)]="nuevoPost.url">
+      </div>
+      <div>
+        <label for="contenido">El contenido del post:</label>
+        <input type="text" id="contenido" placeholder="Ponga el contenido del post" required [(ngModel)]="nuevoPost.contenido">
+      </div>
+      <div class="fechaCaja">
+        <label for="fecha">La fecha:</label>
+        <input type="date" id="fecha" placeholder="" required [(ngModel)]="nuevoPost.fecha">
+      </div>
+
+      <button (click)="agregarPost()">Subir post</button>
+    </div>
+
+  </div>
+  <div class="posts">
+    <h1>Posts:</h1>
+    <div class="posts" [innerHTML]="mostrarPosts()"></div>
+  </div>
