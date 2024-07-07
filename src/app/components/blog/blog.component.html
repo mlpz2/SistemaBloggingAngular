@@ -1,5 +1,5 @@
-  <div class="postFormulario">
-    <h1>Suba un nuevo post:</h1>
+  <div class="postFormulario" id="elPostFormulario">
+    <h1>Haga un nuevo post:</h1>
     <div class="postFormularioCaja">
       <div>
         <label for="titulo">El titulo:</label>
@@ -22,7 +22,7 @@
     </div>
 
   </div>
-  <div class="posts">
+  <div class="posts" id="losPosts">
     <h1>Posts:</h1>
     <div class="posts" [innerHTML]="mostrarPosts()"></div>
   </div>
